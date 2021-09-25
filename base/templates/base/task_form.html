@@ -1,0 +1,20 @@
+{% extends 'base/main.html' %}   
+{% block content %}
+<div class="header-bar">
+        <a href="{% url 'tasks' %}">&#8592;Back</a>
+
+    </div>
+
+<div class="card-body">
+        <h3>Create new task</h3>
+        <form action="" method="POST">
+                {% csrf_token %}
+                <!-- {{form}}  Displays form horizontally-->
+                {{ form.as_p}}
+                <input class="button" type="submit" value="Add">
+            </form>
+
+</div>
+
+
+{% endblock content %}
